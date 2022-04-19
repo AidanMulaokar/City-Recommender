@@ -66,7 +66,7 @@ function App() {
                 </div>
 
                 <div>
-                  <label>Which of the following best describes your gender identity?</label>
+                  <label>Which of the following best describes your assigned sex at birth?</label>
                   <select>
                     <option>Male</option>
                     <option>Female</option>
