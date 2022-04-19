@@ -30,6 +30,7 @@ function App() {
       employment: employment,
       income : income
     }
+    setForm(1);
     fetch("/results",
     {
       method: 'POST',
@@ -42,7 +43,7 @@ function App() {
     ).then(
       data => {
         setTest(data)
-        setForm(1);
+        setForm(2);
         console.log(test)
       }
     )
@@ -131,6 +132,8 @@ function App() {
 
                 <button onClick={() => getResults()}>Search</button>
               </div>
+                : form === 1 ?
+                  <p>Analyzing...</p>
                 :
                 <p>
                   Second Line of Questioning
