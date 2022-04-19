@@ -17,13 +17,32 @@ function App() {
   const [income, setincome] = useState(0);
 
   const [test, setTest] = useState({lon : -74.006, lat: 40.7128});
+  const [form, setForm] = useState(0);
   
   const getResults = () => {
-    fetch("/results").then(
+    const inputs = {
+      age : age,
+      gender : gender,
+      race : race,
+      marital : marital,
+      children : children,
+      education : education,
+      employment: employment,
+      income : income
+    }
+    fetch("/results",
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify(inputs)
+    }).then(
       res => res.json()
     ).then(
       data => {
-        setTest({lat: 47.6062, lon: -122.3321})
+        setTest(data)
+        setForm(1);
         console.log(test)
       }
     )
@@ -38,7 +57,8 @@ function App() {
               <MapChart coordinates={test}></MapChart>
             </td>
             <td>
-              
+              {form === 0 ? 
+              <div>
                 <div>
                   <label>What is your age?</label>
                   <input onChange={(e) => setAge(e.target.value)}/>
@@ -110,6 +130,13 @@ function App() {
                 </div>
 
                 <button onClick={() => getResults()}>Search</button>
+              </div>
+                :
+                <p>
+                  Second Line of Questioning
+                </p>
+              }
+ 
               
             </td>
           </tr>
