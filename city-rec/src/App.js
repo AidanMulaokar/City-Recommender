@@ -81,9 +81,10 @@ function App() {
       res => res.json()
     ).then(
       data => {
-        setTest(data)
+        // setTest(data)
         setForm(3);
-        console.log(test)
+        // console.log(test)
+        console.log(data)
       }
     )
   }
