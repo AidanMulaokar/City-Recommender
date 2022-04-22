@@ -213,7 +213,7 @@ def results():
                                            == city, feature].values[0])
             if feature in ['Homeownership Percentage', 'Percent Business & Tech Jobs',
                            'Gender Wage Gap', 'Take Public Transit to Work', 'Walk or Bike to Work',
-                           'Work From Home', 'Have Access to Exercise Facilities', 'Voted Democrat in 2016']:
+                           'Work From Home', 'Have Access to Exercise Facilities', 'Voted Democrat 2016']:
                 feature_val = str(round(feature_val * 100, 1)) + '%'
             if feature == 'Number of Colleges and Universities':
                 feature_val = int(feature_val)
