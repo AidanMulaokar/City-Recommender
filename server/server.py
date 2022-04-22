@@ -168,7 +168,7 @@ def results():
          'MARRIED': MARRIED, 'HIGH_SCHOOL': HIGH_SCHOOL, 'COLLEGE': COLLEGE, 'EMPLOYED': EMPLOYED, 'SELF_EMPLOYED': SELF_EMPLOYED,
          'UNEMPLOYED': UNEMPLOYED, 'NOT_LOOKING': NOT_LOOKING, 'STUDENT': STUDENT, '35-75K': THIRTYFIVE, '>75K': SEVENTYFIVE}
 
-    demographic_features = pd.DataFrame(data=d, index=list(range(627)))
+    demographic_features = pd.DataFrame(data=d, index=list(range(len(cities))))
     X_pred = pd.concat([demographic_features, cities], axis=1)
     X_pred = X_pred.drop(['Place', 'LATITUDE', 'LONGITUDE'], axis=1)
 
