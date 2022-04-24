@@ -69,7 +69,7 @@ const PersonalForm = (props) => {
         </div>
 
         <div>
-        <div>How much importance do you place on city average wage gap?</div>
+        <div>How much importance do you place on city average wage?</div>
         <span><RangeStepInput min={0} max ={10} step={1} onChange={(e) => setCityAvgWageGap(e.target.value)}/>{cityAvgWageGap}</span>
         </div>
 

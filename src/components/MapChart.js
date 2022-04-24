@@ -44,9 +44,11 @@ const MapChart = (props) => {
       Where We Recommend YOU Live!
     </div>
 
-    <div style={{width: "20vw", height: " 10vh", borderRadius: "5px", background: "#1a1a1a", color: "white", fontSize: 13, verticalAlign: "center"}}>
-      *Note* Pop-ups from marker icons display the top 5 contributing features to our recommendations and their values.
-    </div>
+    <span style={{display: "flex", width: "100%", justifyContent:"center"}}>
+      <div style={{width: "20vw", height: " 10vh", borderRadius: "5px", background: "#1a1a1a", color: "white", fontSize: 13, verticalAlign: "center"}}>
+        *Note* Pop-ups from marker icons display the top 5 contributing features to our recommendations and their values.
+      </div>
+    </span>
 
     <ComposableMap projection="geoAlbersUsa">
       <Geographies geography={geoUrl}>
