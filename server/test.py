@@ -291,7 +291,7 @@ def main():
         if(df['State'][i] in output.keys()):
             output[df['State'][i]] += 1
         else:
-            output[df['State'][i]] = 0
+            output[df['State'][i]] = 1
     # final = []
     # for key in output.keys():
     #     final.append({key: output[key]})

@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+City Recommender
+CS6242 Group 33
+Members: Aidan Mulaokar, Jacob Swain, Joshua Hsu, Dimitri Adhikary
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ACCESSING PROJECT -
 
-## Available Scripts
+Remote Access
+Our project is available for use at https://shielded-wave-14550.herokuapp.com/ , however, this version contains a limited catboost regressor model due to the request time required for our full version. Unfortunately setting up a pinging system for the Heroku servers which are hosting our site proved to be a bit challenging so in order to provide a fully functioning demo we had to sacrifice some of our assumed accuracy.
 
-In the project directory, you can run:
+Local Access
+To access and run our code locally you can either download a zip of the project repo or clone it to your machine.
 
-### `npm start`
+PREREQUISITES -
+In order to run the project locally you must have installed the following:
+Node.js >17
+Python version >3.6
+Google Chrome (recommended)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+SETUP -
+The recommended way of using the project is to first open two terminals on your machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Frontend
+In one terminal, navigate to the root "City-Recommender" folder of our repo. This will be the terminal that will act as the client and track the frontend of the project. From here run the command "npm install" this uses npm (Node Package Manager) to install all of the required project dependencies onto your machine. These can be uninstalled at a later time using "npm uninstall <package name>". If there are any issues installing the dependencies and you would like to continue trying to run the project on your machine, run "npm install --force" which will remove system protections and force your computer to update. Warning: we do not know if there are any risks with this method, but as of our research and useage ourselves we can only attest to not encountering any issues as of now. Once the packages are successfully installed run "npm start". You should receive a startup message in the terminal and if you open a browser and navigate to "http://localhost:3000" you should see the initial screen of our project. Please do not try using the application at this time if you have not completed the Backend Steup.
 
-### `npm test`
+Backend
+In the other terminal navigate to the root folder "City-Recommender" and then into the "server" folder. From here you will need to run the following commands to install required python libraries :
+(keep in mind the usage is "pip" for windows and "pip3" for mac)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+pip install catboost
+pip install flask
+pip install flask_cors
+pip install pymongo
+pip install "pymongo[srv]"
 
-### `npm run build`
+_NOTE_ While pymongo is not an active library in our project there are commented provisions to use pymongo connections and therefore if you would like to test out our mongo connections we recommend installing this library.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once all of these installations have finished, run "python server.py" ("python3 server.py" if on mac). You should see a message similar to:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Restarting with stat
+- Debugger is active!
+- Debugger PIN: 608-458-836
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Now your server is set up and you can begin using the project!
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+PROJECT USAGE
+There is a more detailed description found in our report about the project itself, but the basic usage is as follows. The initial screen displayes a choropleth map of previous recommendations we have given on a state to state basis. These totals will be displayed upon hovering over the state labels. On the right side you will notice a progressive form that you can fill out to then receive results on our recommendations for you. The results will be displayed on a rerendered map in the form of clickable markers with the drilldown of contributing factors presented on the right side of the screen and the top 5 factors that specifically contributed to the rating for you and their exact values as tooltips upon hovering over each marker.

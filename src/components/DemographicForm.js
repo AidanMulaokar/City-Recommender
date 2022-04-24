@@ -85,7 +85,7 @@ const DemographicForm = (props) => {
         </div>
 
         
-        <Button variant="contained" onClick={() => props.back()} style={{position: "absolute", bottom: 0, left: 20}}>
+        <Button variant="contained" onClick={() => props.back()} style={{eft: 50}}>
           Back
         </Button>
         <Button variant="contained" onClick={() => props.submitForm({
@@ -98,7 +98,6 @@ const DemographicForm = (props) => {
             employment : employment,
             income : income
         })}
-        style={{position: "absolute", bottom: 0, right: 20}}
         >Search</Button>
         
 

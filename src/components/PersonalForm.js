@@ -132,7 +132,6 @@ const PersonalForm = (props) => {
             cityPolitical : cityPolitical,
             userPolitical : userPolitical
         })}
-        style={{position: "absolute", bottom: 0}}
         >Next</Button>
     </div>
   )

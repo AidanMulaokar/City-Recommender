@@ -119,7 +119,7 @@ function App() {
             </td>
             <td style={{width: "40vw", boxShadow: "-10px 5px 10px gray"}}>
               
-              <Box sx={{width: "37vw", height: "85vh", verticalAlign: "top", marginTop: "5vh"}}>
+              <Box sx={{width: "37vw", height: "85vh", verticalAlign: "top", marginTop: "5vh", overflowY: "scroll"}}>
                 <Stepper activeStep={activeStep}>
                   {steps.map((label) => (
                     <Step key={label}>
