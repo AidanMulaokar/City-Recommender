@@ -38,7 +38,7 @@ pip install flask_cors
 pip install pymongo
 pip install "pymongo[srv]"
 
-_NOTE_ While pymongo is not an active library in our project there are commented provisions to use pymongo connections and therefore if you would like to test out our mongo connections we recommend installing this library.
+_NOTE_ While pymongo is not an active library in our project there are commented provisions to use pymongo connections and therefore if you would like to test out our mongo connections we recommend installing this library. The connection will not be valid since we are not including the password to our database so please let us know if you would like our access credentials.
 
 Once all of these installations have finished, run "python server.py" ("python3 server.py" if on mac). You should see a message similar to:
 
