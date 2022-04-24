@@ -14,10 +14,10 @@ To access and run our code locally you can either download a zip of the project 
 
 PREREQUISITES -
 
-In order to run the project locally you must have installed the following:
-Node.js >17
-Python version >3.6
-Google Chrome (recommended)
+In order to run the project locally you must have installed the following:  
+Node.js >17  
+Python version >3.6  
+Google Chrome (recommended)  
 
 SETUP -
 
@@ -29,14 +29,14 @@ In one terminal, navigate to the root "City-Recommender" folder of our repo. Thi
 
 Backend
   
-In the other terminal navigate to the root folder "City-Recommender" and then into the "server" folder. From here you will need to run the following commands to install required python libraries :
+In the other terminal navigate to the root folder "City-Recommender" and then into the "server" folder. From here you will need to run the following commands to install required python libraries :  
 (keep in mind the usage is "pip" for windows and "pip3" for mac)
 
-pip install catboost
-pip install flask
-pip install flask_cors
-pip install pymongo
-pip install "pymongo[srv]"
+pip install catboost  
+pip install flask  
+pip install flask_cors  
+pip install pymongo  
+pip install "pymongo[srv]"  
 
 _NOTE_ While pymongo is not an active library in our project there are commented provisions to use pymongo connections and therefore if you would like to test out our mongo connections we recommend installing this library. The connection will not be valid since we are not including the password to our database so please let us know if you would like our access credentials.
 
